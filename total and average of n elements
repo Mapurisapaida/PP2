@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+
+#define MAX 100
+
+void main()
+{
+    int arr[MAX], n, i;
+    int sum = 0;
+    float average;
+
+    clrscr();
+
+    printf("Enter the number of elements (max %d): ", MAX);
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+        sum = sum + arr[i];   
+    }
+
+    average = (float)sum / n;  
+    printf("\nTotal = %d", sum);
+    printf("\nAverage = %.2f", average);
+
+    getch();
+}
